@@ -16,7 +16,6 @@ pipeline {
                         "Email: (this IS public)" {
                           send "galfrano@gmail.com\r";
                           expect eof
-                          wait
                         }
                       }
                     }
