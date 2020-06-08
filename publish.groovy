@@ -8,13 +8,13 @@ pipeline {
               sh 'npm login'
               expect {
                 "Username:" {
-                  send $usernameVariable\r;
+                  send "$usernameVariable\r";
                   expect {
                     "Password:" {
-                      send $passwordVariable\r;
+                      send "$passwordVariable\r";
                       expect{
                         "Email: (this IS public)" {
-                          send "galfrano@gmail.com"\r;
+                          send "galfrano@gmail.com\r";
                           expect eof
                           wait
                         }
